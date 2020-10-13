@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography'
 import React from 'react'
 import { bool, func } from 'prop-types'
 import useStyles from './styles'
+import config from '../../config'
 
 const NavBar = ({ open, handleDrawerOpen }) => {
     const classes = useStyles()
@@ -26,10 +27,10 @@ const NavBar = ({ open, handleDrawerOpen }) => {
                     edge="start"
                     className={clsx(classes.menuButton, open && classes.hide)}
                 >
-                    <MenuIcon />
+                    <MenuIcon data-testid="menu-button" />
                 </IconButton>
                 <Typography variant="h6" noWrap>
-                    EU | scrutino
+                    {config.siteData.title}
                 </Typography>
             </Toolbar>
         </AppBar>
