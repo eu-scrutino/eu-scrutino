@@ -41,8 +41,8 @@ const Skeleton = () => {
                     paper: classes.drawerPaper,
                 }}
             >
-                <div className={classes.drawerHeader}>
-                    <IconButton onClick={handleDrawerClose}>
+                <div className={classes.drawerHeader} data-testid="menu-drawer">
+                    <IconButton onClick={handleDrawerClose} data-testid="menu-close">
                         {theme.direction === 'ltr' ? (
                             <ChevronLeftIcon />
                         ) : (
