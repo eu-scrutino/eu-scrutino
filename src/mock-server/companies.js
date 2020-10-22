@@ -11,6 +11,7 @@ module.exports = () => {
             name: faker.company.companyName(),
             funding: faker.commerce.price(),
             inceptionDate: faker.date.past(),
+            business: faker.company.bs(),
             status: 'ACTIVE',
         })
     }
