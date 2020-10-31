@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/eu-scrutino/static/css/main.5f361e03.chunk.css",
+    "main.js": "/eu-scrutino/static/js/main.27e6f9c1.chunk.js",
+    "main.js.map": "/eu-scrutino/static/js/main.27e6f9c1.chunk.js.map",
+    "runtime-main.js": "/eu-scrutino/static/js/runtime-main.58ef956c.js",
+    "runtime-main.js.map": "/eu-scrutino/static/js/runtime-main.58ef956c.js.map",
+    "static/css/2.9e40d109.chunk.css": "/eu-scrutino/static/css/2.9e40d109.chunk.css",
+    "static/js/2.50e4935f.chunk.js": "/eu-scrutino/static/js/2.50e4935f.chunk.js",
+    "static/js/2.50e4935f.chunk.js.map": "/eu-scrutino/static/js/2.50e4935f.chunk.js.map",
+    "index.html": "/eu-scrutino/index.html",
+    "precache-manifest.c161c142533901f33f713eaa41ee4e2b.js": "/eu-scrutino/precache-manifest.c161c142533901f33f713eaa41ee4e2b.js",
+    "service-worker.js": "/eu-scrutino/service-worker.js",
+    "static/css/2.9e40d109.chunk.css.map": "/eu-scrutino/static/css/2.9e40d109.chunk.css.map",
+    "static/css/main.5f361e03.chunk.css.map": "/eu-scrutino/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.50e4935f.chunk.js.LICENSE.txt": "/eu-scrutino/static/js/2.50e4935f.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/eu-scrutino/static/media/roboto-vietnamese-400-normal.a8be5b46.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.58ef956c.js",
+    "static/css/2.9e40d109.chunk.css",
+    "static/js/2.50e4935f.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.27e6f9c1.chunk.js"
+  ]
+}
