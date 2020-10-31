@@ -2,10 +2,12 @@
   "name": "eu-scrutino",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://eu-scrutino.github.io/eu-scrutino",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
     "fontsource-roboto": "^3.0.3",
+    "gh-pages": "^3.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3"
@@ -16,7 +18,9 @@
     "test": "react-scripts test --env=jest-environment-jsdom-sixteen",
     "eject": "react-scripts eject",
     "json-server": "json-server --watch src/mock-server/companies.js --port 5000",
-    "dev": "concurrently \"npm start\" \"npm run json-server\""
+    "dev": "concurrently \"npm start\" \"npm run json-server\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
