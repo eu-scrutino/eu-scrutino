@@ -13,7 +13,7 @@ import ListItemText from '@material-ui/core/ListItemText'
 import FileCopy from '@material-ui/icons/FileCopy'
 import NavBar from '../components/NavBar'
 import useStyles from './styles'
-import LandingPage from './LandingPage'
+import CompaniesPage from './Companies'
 
 const Skeleton = () => {
     const classes = useStyles()
@@ -42,7 +42,10 @@ const Skeleton = () => {
                 }}
             >
                 <div className={classes.drawerHeader} data-testid="menu-drawer">
-                    <IconButton onClick={handleDrawerClose} data-testid="menu-close">
+                    <IconButton
+                        onClick={handleDrawerClose}
+                        data-testid="menu-close"
+                    >
                         {theme.direction === 'ltr' ? (
                             <ChevronLeftIcon />
                         ) : (
@@ -67,7 +70,7 @@ const Skeleton = () => {
                     ))}
                 </List>
             </Drawer>
-            <LandingPage open={open} />
+            <CompaniesPage open={open} />
         </div>
     )
 }
