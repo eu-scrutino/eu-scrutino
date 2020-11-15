@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useTheme } from '@material-ui/core/styles'
 import Drawer from '@material-ui/core/Drawer'
 import CssBaseline from '@material-ui/core/CssBaseline'
@@ -13,12 +13,14 @@ import ListItemText from '@material-ui/core/ListItemText'
 import FileCopy from '@material-ui/icons/FileCopy'
 import NavBar from '../components/NavBar'
 import useStyles from './styles'
-import CompaniesPage from './Companies'
+import { getRouteListing, getPage, DEFAULT_ROUTE } from '../routes'
 
-const Skeleton = () => {
+const IndexPage = () => {
     const classes = useStyles()
     const theme = useTheme()
-    const [open, setOpen] = React.useState(false)
+    const [open, setOpen] = useState(false)
+    const [route, setRoute] = useState(DEFAULT_ROUTE)
+    const routes = getRouteListing()
 
     const handleDrawerOpen = () => {
         setOpen(true)
@@ -55,24 +57,23 @@ const Skeleton = () => {
                 </div>
                 <Divider />
                 <List>
-                    {[
-                        'Landing Page',
-                        'Companies',
-                        'Funding Requests',
-                        'Overview',
-                    ].map((text) => (
-                        <ListItem button key={text}>
+                    {routes.map((route) => (
+                        <ListItem
+                            button
+                            key={route}
+                            onClick={() => setRoute(route)}
+                        >
                             <ListItemIcon>
                                 <FileCopy />
                             </ListItemIcon>
-                            <ListItemText primary={text} />
+                            <ListItemText primary={route} />
                         </ListItem>
                     ))}
                 </List>
             </Drawer>
-            <CompaniesPage open={open} />
+            {getPage(route, { open })}
         </div>
     )
 }
 
-export default Skeleton
+export default IndexPage
