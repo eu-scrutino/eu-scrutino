@@ -1,20 +1,12 @@
 import React from 'react'
-import clsx from 'clsx'
 import Typography from '@material-ui/core/Typography'
-import useStyles from './styles'
+import BasePage from '../base'
 
 const LandingPage = ({ open }) => {
-    const classes = useStyles()
     return (
-        <main
-            className={clsx(classes.content, {
-                [classes.contentShift]: open,
-            })}
-        >
-            <div className={classes.drawerHeader} />
-            <Typography paragraph>Dummy text</Typography>
-            <Typography paragraph>Dummy text (2)</Typography>
-        </main>
+        <BasePage open={open}>
+            <Typography paragraph>Landing page</Typography>
+        </BasePage>
     )
 }
 
