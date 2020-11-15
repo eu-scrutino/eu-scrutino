@@ -1,10 +1,12 @@
 import React from 'react'
 import LandingPage from './pages/LandingPage'
 import OverviewPage from './pages/OverviewPage'
+import CompaniesPage from './pages/Companies'
 
 const ROUTES = [
     { label: 'Landing', page: (props) => <LandingPage {...props} /> },
     { label: 'Overview', page: (props) => <OverviewPage {...props} /> },
+    { label: 'Companies', page: (props) => <CompaniesPage {...props} /> },
 ]
 
 export const getRouteListing = () => ROUTES.map((route) => route.label)
