@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "36e249b3aab9d5d094a08791daa4d5a5",
+    "revision": "31bef7f2e96e26408a54ca36b80a56c0",
     "url": "/eu-scrutino/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/eu-scrutino/static/css/2.9e40d109.chunk.css"
   },
   {
-    "revision": "f7b4eaf58729a116c1d3",
-    "url": "/eu-scrutino/static/css/main.5f361e03.chunk.css"
+    "revision": "4111bff1d66e6db6d4ff",
+    "url": "/eu-scrutino/static/css/main.523f09c5.chunk.css"
   },
   {
     "revision": "79a2d09e898b21df42b7",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/eu-scrutino/static/js/2.ebe65dff.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f7b4eaf58729a116c1d3",
+    "revision": "4111bff1d66e6db6d4ff",
     "url": "/eu-scrutino/static/js/main.442e94f6.chunk.js"
   },
   {
