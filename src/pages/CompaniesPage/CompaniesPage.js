@@ -1,5 +1,5 @@
 import React from 'react'
-import BasePage from '../base'
+import BasePage from '../BasePage'
 import Container from '@material-ui/core/Container'
 import TableContainer from '@material-ui/core/TableContainer'
 import Paper from '@material-ui/core/Paper'

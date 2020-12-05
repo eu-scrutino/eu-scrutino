@@ -1,6 +1,6 @@
 import React from 'react'
 import Typography from '@material-ui/core/Typography'
-import BasePage from '../base'
+import BasePage from '../BasePage'
 
 const OverviewPage = ({ open }) => {
     return (

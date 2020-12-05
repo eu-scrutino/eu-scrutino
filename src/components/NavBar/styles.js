@@ -3,6 +3,7 @@ import { ui } from '../../constants'
 
 const useStyles = makeStyles((theme) => ({
     appBar: {
+        display: 'flex',
         transition: theme.transitions.create(['margin', 'width'], {
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.leavingScreen,

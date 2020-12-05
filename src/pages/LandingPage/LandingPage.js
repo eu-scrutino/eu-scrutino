@@ -1,7 +1,7 @@
 import React from 'react'
 import Typography from '@material-ui/core/Typography'
 import Container from '@material-ui/core/Container'
-import BasePage from '../base'
+import BasePage from '../BasePage'
 
 const LandingPage = ({ open }) => {
     return (
