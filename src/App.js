@@ -3,7 +3,13 @@ import 'fontsource-roboto'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import { ThemeProvider } from '@material-ui/core/styles'
 import ListItem from '@material-ui/core/ListItem'
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
+import {
+    BrowserRouter as Router,
+    Link,
+    Route,
+    Switch,
+    Redirect,
+} from 'react-router-dom'
 import theme from './theme'
 
 import NavBar from './components/NavBar'
@@ -21,7 +27,7 @@ const App = () => {
             <AppContext.Provider value={{ open, setOpen }}>
                 <CssBaseline />
                 <div style={{ display: 'flex' }}>
-                    <Router>
+                    <Router basename="eu-scrutino">
                         <NavBar />
                         <DrawerMenu>
                             <ListItem component={Link} to={ROUTES.ROOT}>
@@ -53,6 +59,7 @@ const App = () => {
                                 path={ROUTES.OVERVIEW}
                                 component={OverviewPage}
                             />
+                            <Redirect to={ROUTES.ROOT} />
                         </Switch>
                     </Router>
                 </div>
