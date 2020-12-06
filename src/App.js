@@ -8,6 +8,7 @@ import DrawerMenu from './components/DrawerMenu'
 import { CompaniesPage, LandingPage, OverviewPage } from './pages'
 import theme from './theme'
 import ListItem from '@material-ui/core/ListItem'
+import CompanyPage from './pages/CompanyPage'
 
 const App = () => {
     const [open, setOpen] = useState(false)
@@ -38,7 +39,8 @@ const App = () => {
                 </DrawerMenu>
                 <Switch>
                     <Route exact path="/" component={LandingPage} />
-                    <Route path="/companies" component={CompaniesPage} />
+                    <Route exact path="/companies" component={CompaniesPage} />
+                    <Route path="/companies/:id" component={CompanyPage} />
                     <Route path="/overview" component={OverviewPage} />
                 </Switch>
             </Router>

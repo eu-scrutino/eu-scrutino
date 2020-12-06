@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import BasePage from '../BasePage'
 import Container from '@material-ui/core/Container'
 import TableContainer from '@material-ui/core/TableContainer'
@@ -14,8 +14,8 @@ import { companies as rows, companiesColumns as columns } from './db'
 
 const CompaniesPage = ({ open }) => {
     const classes = useStyles()
-    const [page, setPage] = React.useState(0)
-    const [rowsPerPage, setRowsPerPage] = React.useState(10)
+    const [page, setPage] = useState(0)
+    const [rowsPerPage, setRowsPerPage] = useState(10)
 
     const handleChangePage = (event, newPage) => {
         setPage(newPage)
