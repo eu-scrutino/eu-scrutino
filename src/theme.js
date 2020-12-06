@@ -23,7 +23,7 @@ const theme = createMuiTheme({
             },
             head: {
                 fontWeight: '600',
-                backgroundColor: 'rgba(184, 208, 217,0.2) !important',
+                backgroundColor: 'lightgrey !important',
             },
         },
     },
