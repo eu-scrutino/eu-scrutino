@@ -3,9 +3,9 @@ import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import BasePage from '../BasePage'
 
-const OverviewPage = ({ open }) => {
+const OverviewPage = () => {
     return (
-        <BasePage open={open}>
+        <BasePage>
             <Container>
                 <Typography paragraph>Overview</Typography>
             </Container>

@@ -3,9 +3,9 @@ import Typography from '@material-ui/core/Typography'
 import Container from '@material-ui/core/Container'
 import BasePage from '../BasePage'
 
-const LandingPage = ({ open }) => {
+const LandingPage = () => {
     return (
-        <BasePage open={open}>
+        <BasePage>
             <Container>
                 <Typography variant="h1" component="h1" gutterBottom>
                     EU | scrutino

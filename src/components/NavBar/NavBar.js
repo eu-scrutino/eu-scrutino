@@ -1,15 +1,16 @@
+import React, { useContext } from 'react'
 import AppBar from '@material-ui/core/AppBar'
 import clsx from 'clsx'
 import Toolbar from '@material-ui/core/Toolbar'
 import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
 import Typography from '@material-ui/core/Typography'
-import React from 'react'
-import { bool, func } from 'prop-types'
 import useStyles from './styles'
 import config from '../../config'
+import { AppContext } from '../../App'
 
-const NavBar = ({ open, handleDrawerOpen }) => {
+const NavBar = () => {
+    const { open, setOpen } = useContext(AppContext)
     const classes = useStyles()
 
     return (
@@ -23,7 +24,7 @@ const NavBar = ({ open, handleDrawerOpen }) => {
                 <IconButton
                     color="inherit"
                     aria-label="open drawer"
-                    onClick={handleDrawerOpen}
+                    onClick={() => setOpen(true)}
                     edge="start"
                     className={clsx(classes.menuButton, open && classes.hide)}
                 >
@@ -35,11 +36,6 @@ const NavBar = ({ open, handleDrawerOpen }) => {
             </Toolbar>
         </AppBar>
     )
-}
-
-NavBar.propTypes = {
-    open: bool.isRequired,
-    handleDrawerOpen: func.isRequired,
 }
 
 export default NavBar

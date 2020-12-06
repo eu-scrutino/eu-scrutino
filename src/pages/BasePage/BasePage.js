@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import clsx from 'clsx'
 import useStyles from './styles'
+import { AppContext } from '../../App'
 
-const BasePage = ({ children, open }) => {
+const BasePage = ({ children }) => {
     const classes = useStyles()
+    const { open } = useContext(AppContext)
 
     return (
         <main

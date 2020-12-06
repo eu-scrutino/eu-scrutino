@@ -12,7 +12,7 @@ import ResourceTableRows from '../../components/ResourceTableRows'
 import ResourceTableHeaders from '../../components/ResourceTableHeaders/ResourceTableHeaders'
 import { companies as rows, companiesColumns as columns } from './db'
 
-const CompaniesPage = ({ open }) => {
+const CompaniesPage = () => {
     const classes = useStyles()
     const [page, setPage] = useState(0)
     const [rowsPerPage, setRowsPerPage] = useState(10)
@@ -27,7 +27,7 @@ const CompaniesPage = ({ open }) => {
     }
 
     return (
-        <BasePage open={open}>
+        <BasePage>
             <Container>
                 <Paper className={classes.root}>
                     <TableContainer className={classes.container}>
