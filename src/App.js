@@ -1,14 +1,15 @@
 import React, { useState, createContext } from 'react'
 import 'fontsource-roboto'
-import { ThemeProvider } from '@material-ui/core/styles'
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
 import CssBaseline from '@material-ui/core/CssBaseline'
+import { ThemeProvider } from '@material-ui/core/styles'
+import ListItem from '@material-ui/core/ListItem'
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
+import theme from './theme'
+
 import NavBar from './components/NavBar'
 import DrawerMenu from './components/DrawerMenu'
-import { CompaniesPage, LandingPage, OverviewPage } from './pages'
-import theme from './theme'
-import ListItem from '@material-ui/core/ListItem'
-import CompanyPage from './pages/CompanyPage'
+import { CompaniesPage, LandingPage, OverviewPage, CompanyPage } from './pages'
+import * as ROUTES from './constants/routes'
 
 export const AppContext = createContext({ open: false })
 
@@ -23,28 +24,35 @@ const App = () => {
                     <Router>
                         <NavBar />
                         <DrawerMenu>
-                            <ListItem component={Link} to="/">
+                            <ListItem component={Link} to={ROUTES.ROOT}>
                                 Home
                             </ListItem>
-                            <ListItem component={Link} to="/companies">
+                            <ListItem component={Link} to={ROUTES.COMPANIES}>
                                 Companies
                             </ListItem>
-                            <ListItem component={Link} to="/overview">
+                            <ListItem component={Link} to={ROUTES.OVERVIEW}>
                                 Overview
                             </ListItem>
                         </DrawerMenu>
                         <Switch>
-                            <Route exact path="/" component={LandingPage} />
                             <Route
                                 exact
-                                path="/companies"
+                                path={ROUTES.ROOT}
+                                component={LandingPage}
+                            />
+                            <Route
+                                exact
+                                path={ROUTES.COMPANIES}
                                 component={CompaniesPage}
                             />
                             <Route
-                                path="/companies/:id"
+                                path={ROUTES.COMPANY}
                                 component={CompanyPage}
                             />
-                            <Route path="/overview" component={OverviewPage} />
+                            <Route
+                                path={ROUTES.OVERVIEW}
+                                component={OverviewPage}
+                            />
                         </Switch>
                     </Router>
                 </div>
